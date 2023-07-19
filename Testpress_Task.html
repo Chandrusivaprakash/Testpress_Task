@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     1. Write a program to print the reverse of the given string.
+// Input
+// codecode
+// Output
+// edocedoc
+
+let fname="codecode"
+let reverse=""
+for(let i=fname.length-1;i>=0;i-=1){
+reverse+=fname[i]
+}
+console.log(reverse);
+
+//2. Given a number, check whether it is a prime number or not.
+// Input 1
+// 3
+// Output 1
+// Yes
+// Input 2
+// 4
+// Output 2
+// No
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      return false; 
+    }
+  }
+
+  return true;
+}
+console.log(isPrime(3) ? 'Yes' : 'No') 
+console.log(isPrime(4) ? 'Yes' : 'No')
+
+// 3. Given an array of numbers, arrange them in a way that it forms the largest value.
+// Input
+// [54, 546, 548, 60]
+// Output
+// 6054854654
+
+let arr=[54, 546, 548, 60]
+let reverse1=[]
+for(let i=arr.length-1;i>=0;i-=1){
+reverse1.push(arr[i])
+}
+console.log(reverse1);
+
+// 4. Given a number N, print reverse of number N.
+// Input
+// 988
+// Output
+// 889
+
+let num=988
+let reverse2=parseInt(num.toString().split("").reverse().join(""))
+console.log(reverse2);
+
+// 5. Given an array of numbers, find the maximum and minimum element in the array.
+// Input
+// [54, 546, 548, 60]
+// Output
+// 548 54
+
+let arr1=[54, 546, 548, 60]
+
+let max=arr1[0]
+let min=arr1[0]
+
+for(let i=0;i<arr1.length;i+=1){
+    if(max < arr1[i]){
+        max=arr1[i]
+    }
+    if (min > arr1[i]) {
+        min=arr1[i]
+    }
+}
+console.log(`${max} ${min}`);
+
+
+
+    
+</script>
+</html>
